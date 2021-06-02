@@ -1,3 +1,5 @@
+// 백준3046_R2_수학_브론즈 5
+
 #include <stdio.h>
 
 int main()
