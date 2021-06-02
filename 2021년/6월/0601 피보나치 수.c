@@ -1,3 +1,5 @@
+// 백준_2747_피보나치 수_DP_브론즈 3
+
 #include <stdio.h>
 
 int nums[46];
