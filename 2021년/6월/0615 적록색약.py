@@ -1,4 +1,4 @@
-# 백준10026_적록색약_bfs_실버 2
+# 백준10026_적록색약_dfs_골드 5
 
 import sys
 sys.setrecursionlimit(100000)
