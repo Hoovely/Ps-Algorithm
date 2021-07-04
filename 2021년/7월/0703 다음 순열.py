@@ -1,28 +1,24 @@
 # 백준_10972_다음 순열_수학_실버 3
+# itertools 사용하려다가 시간초과!
 
 import sys
 input = sys.stdin.readline
 
-
-def solve():
-    if len(lse) == n:
-        print(*result)
-        return
-    for i in range(n):
-        if visited[i] == 0:
-            visited[i] == 1
-            solve()
-            lst.pop()
-
-
 n = int(input())
 lst = list(map(int, input().split()))
+find = False
 
-if lst == list(reversed([i for i in range(1, n+1)])):
+for i in range(n-1,0,-1):
+    if lst[i-1] < lst[i]:
+        for j in range(n-1,0,-1):
+            if lst[i-1] < lst[j]:
+                lst[i-1],lst[j] = lst[j],lst[i-1]
+                lst = lst[:i] + sorted(lst[i:])
+                find = True
+                break
+    if find:
+        print(*lst)
+        break
+    
+if not find:
     print(-1)
-else:
-    visited = [0]*n
-    for i in lst:
-        visited[i] = 1
-    solve()
-    # print(result)
