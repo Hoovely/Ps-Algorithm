@@ -32,7 +32,6 @@ for _ in range(m):
 
 for i in range(n):
     dfs(i, 0)
-    print(visited)
     if flag:
         break
 
