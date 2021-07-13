@@ -1,4 +1,4 @@
-// ¹éÁØ_16947_¼­¿ï ÁöÇÏÃ¶ 2È£¼±_DFS_°ñµå 3
+// ë°±ì¤€_16947_ì„œìš¸ ì§€í•˜ì²  2í˜¸ì„ _DFS_ê³¨ë“œ 3
 
 #include <iostream>
 #include <vector>
@@ -47,8 +47,7 @@ void sum_distance(int now, int dis)
 		
 		if(d[next] == 0)
 		{
-			d[now] = dis;
-			cout << dis << ' ';
+			cout << dis <<' ';
 			return;
 		}
 		else
@@ -88,6 +87,7 @@ int main()
 		else
 		{
 			fill(visited+1, visited+n+1,0);
+			visited[i] = 1;
 			sum_distance(i, 1);
 		}
 	}
